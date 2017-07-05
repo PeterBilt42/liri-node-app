@@ -70,7 +70,7 @@ var getMovieFunction = function(movieName) {
 }
 var doWhatItSays = function(caseData, functionData) {
 	fs.readFile('random.txt','utf8', function(err, data) {
-		// if (err) throw err;
+		if (err) throw err;
 		
 		var dataArr = data.split(',');
 
@@ -97,7 +97,7 @@ var pick = function(caseData, functionData) {
 			doWhatItSays();
 			break;
 		default:
-		console.log("Liri doesn't know how to do that");
+		console.log("Liri doesn't know how to do that!");
 	}
 }
 
